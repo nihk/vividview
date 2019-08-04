@@ -7,6 +7,12 @@ A ViewGroup that continually animates a stack of two or more children using scal
 
 You can add it as a gradle dependency like so:
 
+Add this to your project-level build.gradle's `allprojects.repositories` block.
+```
+maven { url "https://dl.bintray.com/nickjrose/scalerfader/" }
+```
+
+Then add this to your app-level build.gradle's `dependencies` block.
 ```
 implementation "ca.nihk:scalerfader:0.0.1"
 ```
