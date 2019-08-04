@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ca.nihk.scalerfader.ScalerFader
+        android:id="@+id/scaler_fader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:duration="3000"
+        app:fade_fraction_start="0.8"
+        app:scale_end="1.25"
+        app:scale_start="1.0"
+        app:start_immediately="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+            app:srcCompat="@drawable/ic_android_24dp"
+            tools:ignore="ContentDescription" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_blue_bright"
+            android:padding="32dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Some interesting text you should totally read!"
+                android:textColor="@android:color/white"
+                android:textSize="32sp" />
+
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_local_cafe_24dp"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            app:srcCompat="@drawable/ic_favorite_24dp"
+            tools:ignore="ContentDescription" />
+
+    </ca.nihk.scalerfader.ScalerFader>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

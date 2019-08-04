@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+ext {
+    bintrayRepo = "scalerfader"
+    bintrayName = "ca.nihk.scalerfader"
+    libraryName = "scalerfader"
+
+    publishedGroupId = "ca.nihk"
+    artifact = "scalerfader"
+    libraryVersion = "0.0.1"
+
+    libraryDescription = "A ViewGroup that animates a stack of two or more children using scaling and fading effects."
+    siteUrl = "https://github.com/nihk/ScalerFader"
+    gitUrl = "https://github.com/nihk/ScalerFader.git"
+    developerId = "nihk"
+    developerName = "nihk"
+    developerEmail = "nrose2@alumni.uwo.ca"
+    licenseName = "The Apache Software License, Version 2.0"
+    licenseUrl = "https://www.apache.org/licenses/LICENSE-2.0"
+    allLicenses = ["Apache 2.0"]
+}
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 28
+        versionCode 1
+        versionName "0.0.1"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "androidx.appcompat:appcompat:1.0.2"
+}
+
+repositories {
+    mavenCentral()
+}
+
+if (project.rootProject.file("local.properties").exists()) {
+    apply from: "https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle"
+    apply from: "https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle"
+}
