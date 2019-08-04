@@ -1,3 +1,5 @@
+[ ![Download](https://api.bintray.com/packages/nickjrose/scalerfader/ca.nihk.scalerfader/images/download.svg?version=0.0.1) ](https://bintray.com/nickjrose/scalerfader/ca.nihk.scalerfader/0.0.1/link)
+
 # ScalerFader
 A ViewGroup that continually animates a stack of two or more children using scaling and fading effects.
 
