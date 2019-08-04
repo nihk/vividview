@@ -37,4 +37,4 @@ Then simply use the `ScalerFader` class either programmatically or in your XML l
 
 The custom attributes are optional and default to the values you see above.
 
-Call ScalerFader.start() or ScalerFader.reset() as you see fit.
+Call `ScalerFader.start()` or `ScalerFader.reset()` as you see fit to control the state of the animation.
