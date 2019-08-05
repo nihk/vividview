@@ -1,4 +1,4 @@
-[ ![Download](https://api.bintray.com/packages/nickjrose/scalerfader/ca.nihk.scalerfader/images/download.svg?version=0.0.1) ](https://bintray.com/nickjrose/scalerfader/ca.nihk.scalerfader/0.0.1/link)
+[ ![Download](https://api.bintray.com/packages/nickjrose/scalerfader/ca.nihk.scalerfader/images/download.svg?version=0.0.2) ](https://bintray.com/nickjrose/scalerfader/ca.nihk.scalerfader/0.0.2/link)
 
 # ScalerFader
 A ViewGroup that continually animates a stack of two or more children using scaling and fading effects.
@@ -7,7 +7,7 @@ A ViewGroup that continually animates a stack of two or more children using scal
 
 You can add it as a gradle dependency like so:
 ```
-implementation "ca.nihk:scalerfader:0.0.1"
+implementation "ca.nihk:scalerfader:0.0.2"
 ```
 
 Then simply use the `ScalerFader` class either programmatically or in your XML like so:
