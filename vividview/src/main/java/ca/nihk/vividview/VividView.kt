@@ -57,7 +57,7 @@ open class VividView : FrameLayout {
         stop()
     }
 
-    fun start() {
+    open fun start() {
         check(childCount >= 2) { "There must be at least two children." }
 
         val isStarted = animatorSets.isNotEmpty()
@@ -66,7 +66,7 @@ open class VividView : FrameLayout {
         start(children.last())
     }
 
-    fun stop() {
+    open fun stop() {
         animatorSets.forEach(AnimatorSet::cancel)
         animatorSets.clear()
     }
