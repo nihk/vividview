@@ -52,6 +52,11 @@ class VividView : FrameLayout {
         if (startImmediately) start()
     }
 
+    override fun onDetachedFromWindow() {
+        super.onDetachedFromWindow()
+        stop()
+    }
+
     fun start() {
         check(childCount >= 2) { "There must be at least two children." }
 
