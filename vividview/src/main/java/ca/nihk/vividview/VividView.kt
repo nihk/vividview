@@ -31,7 +31,7 @@ class VividView : FrameLayout {
     private var scaleEnd = 1.25f
     private var startImmediately = false
 
-    private var animatorSet: AnimatorSet? = null
+    private val animatorSets = mutableListOf<AnimatorSet>()
 
     private fun initialize(
         context: Context,
@@ -60,19 +60,19 @@ class VividView : FrameLayout {
     fun start() {
         check(childCount >= 2) { "There must be at least two children." }
 
-        val isStarted = animatorSet != null
+        val isStarted = animatorSets.isNotEmpty()
         if (isStarted) return
 
         start(children.last())
     }
 
     fun stop() {
-        animatorSet?.cancel()
-        animatorSet = null
+        animatorSets.forEach(AnimatorSet::cancel)
+        animatorSets.clear()
     }
 
     private fun start(target: View) {
-        animatorSet = AnimatorSet().apply {
+        animatorSets += AnimatorSet().apply {
             interpolator = LinearInterpolator()
             duration = this@VividView.duration.toLong()
             playTogether(target.scaleAnimator(), target.fadeAnimator())
@@ -106,6 +106,7 @@ class VividView : FrameLayout {
         fade.addListener(
             onEnd = {
                 fade.removeAllListeners()
+                animatorSets.removeFirst()
                 rotateChildrenRight()
             }
         )
