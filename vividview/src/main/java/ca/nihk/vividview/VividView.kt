@@ -14,7 +14,7 @@ import androidx.core.animation.addListener
 import androidx.core.content.withStyledAttributes
 import androidx.core.view.children
 
-class VividView : FrameLayout {
+open class VividView : FrameLayout {
     constructor(context: Context) : super(context) {
         initialize(context)
     }
