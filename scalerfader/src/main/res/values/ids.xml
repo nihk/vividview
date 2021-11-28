@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <item name="scaler_fader_animator_set" type="id" />
-    <item name="scaler_fader_fade_animator" type="id" />
-</resources>

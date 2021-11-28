@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="ScalerFader">
+    <declare-styleable name="VividView">
+        <attr name="start_immediately" format="boolean" />
         <attr name="duration" format="integer" />
         <attr name="scale_start" format="float" />
         <attr name="scale_end" format="float" />
         <attr name="fade_fraction_start" format="float" />
-        <attr name="start_immediately" format="boolean" />
     </declare-styleable>
 </resources>

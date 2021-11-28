@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ca.nihk.scalerfader.ScalerFader
-        android:id="@+id/scaler_fader"
+    <ca.nihk.vividview.VividView
+        android:id="@+id/vivid_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:duration="3000"
@@ -53,6 +53,6 @@
             app:srcCompat="@drawable/ic_favorite_24dp"
             tools:ignore="ContentDescription" />
 
-    </ca.nihk.scalerfader.ScalerFader>
+    </ca.nihk.vividview.VividView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
